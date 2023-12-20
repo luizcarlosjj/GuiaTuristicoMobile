@@ -1,24 +1,37 @@
 import React from 'react';
-import {  StyleSheet,  Image,  View,  Text,  TouchableOpacity,} from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+import {  StyleSheet,  ScrollView,  View,  Text,  TouchableOpacity,} from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function ListCiclismo() {
  return (
    <View style={styles.container}>
-    <TouchableOpacity style={styles.card1}>
-      <View style={styles.conView}>
-        <MaterialIcons name="attractions" size={40} color="#02247C"/>
-        <Text style={styles.textP1}>Pontos Turisticos</Text>
-      </View>
-    </TouchableOpacity>
+    <ScrollView style={styles.lateralView}
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}>
 
-    <TouchableOpacity style={styles.card1}>
-      <View style={styles.conView}>
-        <MaterialCommunityIcons name="bike" size={40} color="#02247C"/>
-        <Text style={styles.textP1}>Trilhas</Text>
-      </View>
-    </TouchableOpacity>
+      <TouchableOpacity style={styles.card1}>
+        <View style={styles.conView}>
+          <MaterialIcons name="attractions" size={40} color="#000"/>
+          <Text style={styles.textP1}>Locais</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.card1}>
+        <View style={styles.conView}>
+          <MaterialCommunityIcons name="bike" size={40} color="#000"/>
+          <Text style={styles.textP1}>Rotas</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.card1}>
+        <View style={styles.conView}>
+          <MaterialIcons name="supervised-user-circle" size={40} color="#000"/>
+          <Text style={styles.textP1}>Grupos</Text>
+        </View>
+      </TouchableOpacity>
+      
+    </ScrollView>
    </View>
   );
 }
@@ -27,16 +40,19 @@ export default function ListCiclismo() {
 const styles = StyleSheet.create({
     container:{
       flexDirection: 'row',
-      justifyContent: 'space-between',
-      padding: 10
+      padding: 0
+    },
+    lateralView:{
+      flexDirection: 'row',
     },
     card1:{
-      width: 120,
-      height: 120,
+      width: 105,
+      height: 105,
       borderRadius: 10,
       backgroundColor: '#d2d2d2',
       borderWidth: 2,
       borderColor: '#000',
+      marginLeft: 15
     },
     conView:{
       flex: 1,
@@ -45,7 +61,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     textP1:{
-      color: '#02247C',
+      color: '#000',
       fontSize: 18,
       fontWeight: 'bold',
       paddingTop: 10,
