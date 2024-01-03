@@ -11,21 +11,21 @@ export default function ListTurismo({ navigation  }) {
       showsHorizontalScrollIndicator={false}>
       <TouchableOpacity style={styles.card1}>
         <View style={styles.conView}>
-          <MaterialIcons name="attractions" size={45} color="#000"/>
+          <MaterialIcons name="attractions" size={40} color="#000"/>
           <Text style={styles.textP1}>Pontos Turisticos</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.card1}>
         <View style={styles.conView}>
-          <FontAwesome5 name="route" size={45} color="#000"/>
+          <FontAwesome5 name="route" size={40} color="#000"/>
           <Text style={styles.textP1}>Trilhas</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.card1}>
         <View style={styles.conView}>
-          <MaterialIcons name="local-attraction" size={45} color="#000"/>
+          <MaterialIcons name="local-attraction" size={40} color="#000"/>
           <Text style={styles.textP1}>Eventos</Text>
         </View>
       </TouchableOpacity>

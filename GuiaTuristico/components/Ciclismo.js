@@ -12,7 +12,7 @@ export default function Ciclismo() {
             <MaterialIcons name="directions-bike" size={26} color="#fff"/>
             <Text style={styles.Text}>Ciclismo</Text>
         </View>
-        <Text style={styles.Textp2}>Quer programar aquele Pedal em Goiânia ? Vem com "Nóis"</Text>
+        <Text style={styles.Textp2}>Venha programar o seu Pedal!</Text>
         <ListCiclismo />
    </View>
   );
